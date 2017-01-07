@@ -1,5 +1,7 @@
 # geoscale #
 
+[![Build Status](https://travis-ci.org/dschmitz/geoscale.svg?branch=master)](https://travis-ci.org/dschmitz/geoscale)
+
 Welcome to Geoscale!
 
 ## Contribution policy ##
