@@ -16,21 +16,19 @@
 
 package io.uport.geoscale
 
-/**
-  * Created by schmitda on 29.11.16.
-  */
 sealed trait Direction
 
-case object Up extends Direction
-
-case object Down extends Direction
-
-case object Left extends Direction
-
-case object Right extends Direction
-
 object Direction {
-  def horizontal(direction: Direction) = (direction == Left || direction == Right)
 
-  def vertical(direction: Direction) = (direction == Up || direction == Down)
+  case object Up extends Direction
+
+  case object Down extends Direction
+
+  case object Left extends Direction
+
+  case object Right extends Direction
+
+  def isHorizontal(direction: Direction) = (direction == Left || direction == Right)
+
+  def isVertical(direction: Direction) = (direction == Up || direction == Down)
 }
