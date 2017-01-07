@@ -83,10 +83,10 @@ object BingQuadKey {
 
   private def keyCharTranslate(keyChar: Char, direction: Direction): Char = {
     keyChar match {
-      case '0' => if (horizontal(direction)) '1' else '2'
-      case '1' => if (horizontal(direction)) '0' else '3'
-      case '2' => if (horizontal(direction)) '3' else '0'
-      case '3' => if (horizontal(direction)) '2' else '1'
+      case '0' => if (Direction.isHorizontal(direction)) '1' else '2'
+      case '1' => if (Direction.isHorizontal(direction)) '0' else '3'
+      case '2' => if (Direction.isHorizontal(direction)) '3' else '0'
+      case '3' => if (Direction.isHorizontal(direction)) '2' else '1'
       case _ =>
         throw new IllegalArgumentException(s"KeyChar must be within [0-3], but was ${keyChar}")
     }
